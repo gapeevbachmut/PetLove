@@ -1,73 +1,27 @@
-# React + TypeScript + Vite
+Загальні критерії виконання проєкту №2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Верстка відповідає макету/ТЗ і коректно відмальовується на мобільних та планшетних пристроях; семантична та валідна
 
-Currently, two official plugins are available:
+Немає помилок в консолі браузера
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Робота виконана на React або React Native
 
-## React Compiler
+При роботі з формами використано бібліотеку formik і бібліотек yup
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Маршрутизація виконана з використанням React Router (для React) або React Navigation(lkz React Native)
 
-## Expanding the ESLint configuration
+За бажанням можна використовувати ui-бібліотеки
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Інтерактивність працює відповідно до технічного завдання.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Код відформатований та без коментарів
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+В репозиторії має бути README.md з описом проєкту: про що цей проєкт, основні технології, макет, ТЗ
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Проєкт задеплоєний на github pages, netlify.com або інший сторонній хостинг
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+До зарахування даного домашнього завдання допускається також власний проєкт студента/тестове завдання написане на React/React+TypeScript (за бажанням) або на React Native. У такому випадку, якщо виконане завдання вміщує логіку алгоритму, але не є завершеним проєктом, його слід вдосконалити, надавши візуально зрозумілий опис алгоритму, його мети і переваг, які б могли зацікавити пересічного користувача.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Студент для виконання ДЗ має право обирати проєкти №2 або №3. У разі обрання проєкту №3 на наступному блоці cтуденту слід обирати проєкт серед запропонованих, окрім тих, які ним вже було реалізовано.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ДЗ вважається успішно виконаним лише за умови прийняття повністю виконаного ДЗ до настання дедлайну (з усіма зробленими правками).
